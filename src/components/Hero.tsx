@@ -231,14 +231,12 @@ export default function Hero() {
               <div className="absolute -inset-2 border border-brand-blue/20 stroke-dasharray-[5_5] rounded-3xl pointer-events-none"></div>
               <div className="absolute -inset-4 border border-brand-yellow/35 stroke-dasharray-[2_4] rounded-3xl pointer-events-none"></div>
 
-              {/* Magnificent Large Interactive Brand Block */}
+              {/* Magnificent Large Interactive Brand Block with real Logo Image */}
               <motion.div 
-                className="bg-brand-white p-8 sm:p-12 rounded-3xl border-3 border-brand-black heavy-shadow relative group overflow-hidden"
+                className="bg-brand-white p-8 sm:p-12 rounded-3xl border-3 border-brand-black heavy-shadow relative group overflow-hidden flex items-center justify-center min-h-[300px] sm:min-h-[400px]"
                 id="hero-logo-container"
                 whileHover={{ 
                   y: -6, 
-                  rotateY: -2,
-                  rotateX: 2,
                   boxShadow: "10px 10px 0px 0px var(--color-brand-black)",
                   transition: { duration: 0.3 }
                 }}
@@ -246,33 +244,8 @@ export default function Hero() {
                 {/* Real-time high-fidelity brand ribbon marker */}
                 <div className="absolute top-0 left-0 right-0 h-3 bg-gradient-to-r from-brand-yellow via-brand-blue to-brand-yellow"></div>
                 
-                <div className="flex flex-col items-center gap-8 py-6 relative z-10">
-                  
-                  {/* CELEBRATED COMPANY NAME AS STYLIZED TEXT */}
-                  <div className="flex flex-col items-center justify-center py-6 text-center select-none" id="hero-text-logo">
-                    <span className="font-heading font-black text-5xl sm:text-6xl text-brand-black tracking-tighter leading-none">
-                      2B'S <span className="text-brand-blue">Interior</span>
-                    </span>
-                    <span className="text-sm sm:text-base font-mono tracking-[0.25em] uppercase font-black mt-4 text-brand-black px-5 py-2 bg-brand-yellow rounded-md border-2 border-brand-black shadow flex items-center gap-2">
-                      <HardHat className="w-4 h-4 text-brand-blue fill-brand-blue/10 stroke-[2.5]" />
-                      <span>CONSTRUCTION</span>
-                    </span>
-                  </div>
-
-                  {/* Subtitle credentials area */}
-                  <div className="text-center space-y-3.5 w-full">
-                    <div className="inline-block bg-brand-black text-brand-yellow font-mono text-[10px] sm:text-[11px] font-extrabold tracking-[0.25em] uppercase px-4 py-1.5 rounded">
-                      UNION CERTIFIED • CHICAGOLAND
-                    </div>
-                    <div className="space-y-1">
-                      <p className="font-heading font-black text-2xl tracking-tight text-brand-black">
-                        From Frame To Finish
-                      </p>
-                      <p className="text-[10px] font-mono tracking-widest text-brand-slate uppercase font-bold">
-                        CHICAGO, IL • ESTABLISHED 2026
-                      </p>
-                    </div>
-                  </div>
+                <div className="relative z-10 flex items-center justify-center w-full">
+                  <Logo className="w-[280px] sm:w-[360px] h-auto object-contain transition-transform duration-500 ease-out group-hover:scale-105" id="hero-logo-image" />
                 </div>
 
                 {/* Subtle drafting blueprints line in background of card */}
